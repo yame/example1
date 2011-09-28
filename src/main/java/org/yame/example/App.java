@@ -1,9 +1,10 @@
-package org.yamr.example;
+package org.yame.example;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.apache.commons.beanutils.PropertyUtils;
-import org.yamr.example.bean.Person;
+import org.yame.example.bean.Person;
+
 
 public class App {
 	public static void main(String[] args){

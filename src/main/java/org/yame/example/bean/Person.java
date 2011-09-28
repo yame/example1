@@ -1,4 +1,4 @@
-package org.yamr.example.bean;
+package org.yame.example.bean;
 
 public class Person {
 	private String name;
