@@ -3,6 +3,8 @@ package org.yame.example;
 import java.lang.reflect.InvocationTargetException;
 
 import org.apache.commons.beanutils.PropertyUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.yame.example.bean.Person;
 
 
@@ -13,7 +15,6 @@ public class App {
 		Person person = new Person();
 		person.setName("zhengym");
 		
-		
 		try {
 			PropertyUtils.setProperty(person, "name", "Name");
 			String name = (String) PropertyUtils.getProperty(person, "name");
@@ -21,14 +22,14 @@ public class App {
 			String street = person.getAddress().getStreet();
 			System.out.println(street);
 			System.out.println(name);
+			
+			Log logger = LogFactory.getLog(App.class);
+			logger.error("1121");
 		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (NoSuchMethodException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
